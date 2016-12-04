@@ -13,9 +13,9 @@ docker_compose_version="1.9.0"
 function install_docker {
   echo "Installing Docker ${docker_version}"
 
-  sudo apt-get update
-  sudo apt-get install -y docker-engine
-  sudo service docker start
+  apt-get update
+  apt-get install -y docker-engine
+  service docker start
 }
 
 function install_docker_compose {
