@@ -8,14 +8,14 @@ docker_compose_version="1.9.0"
 
 build_dir=$1
 
-cut -d: -f1 /etc/passwd
+whoami
 
 function install_docker {
   echo "Installing Docker Engine ${docker_version}"
 
-  sudo -u root -H sh -c "apt-get update"
-  su apt-get install -y "docker-engine=${docker_version}"
-  su service docker start
+  # sudo -u root -H sh -c "apt-get update"
+  # su apt-get install -y "docker-engine=${docker_version}"
+  # su service docker start
 }
 
 function install_docker_compose {
