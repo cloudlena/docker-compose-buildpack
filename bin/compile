@@ -8,10 +8,10 @@ docker_compose_version="1.9.0"
 
 build_dir=$1
 
-whoami
+echo $1
 
 function install_docker {
-  echo "Installing Docker Engine ${docker_version}"
+  echo "Installing Docker ${docker_version}"
 
   curl -L "https://get.docker.com/builds/Linux/x86_64/docker-${docker_version}.tgz" -o "$1/docker"
 }
