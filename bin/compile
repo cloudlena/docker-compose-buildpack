@@ -12,6 +12,8 @@ function install_docker {
   echo "Installing Docker ${docker_version}"
 
   curl -L "https://get.docker.com/builds/Linux/x86_64/docker-${docker_version}.tgz" -o "/tmp/app/docker"
+
+  ls -a /tmp/app
 }
 
 function install_docker_compose {
