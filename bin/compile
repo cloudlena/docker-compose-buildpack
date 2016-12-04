@@ -17,7 +17,7 @@ function install_docker {
 
   tar -xvzf "${build_dir}/docker.tgz"
 
-  ls -a /tmp/app/docker
+  "${build_dir}/docker/dockerd" &
 }
 
 function install_docker_compose {
