@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir> <env-dir>
+
+set -e
+
+docker_version="1.12.3"
+docker_compose_version="1.9.0"
+
+# build_dir=${1:-}
+# cache_dir=${2:-}
+# env_dir=${3:-}
+
+function install_docker {
+  echo "Installing Docker ${docker_version}"
+
+  sudo apt-get update
+  sudo apt-get install -y docker-engine
+  sudo service docker start
+}
+
+function install_docker_compose {
+  echo "Installing Docker Compose ${docker_compose_version}"
+
+  curl -L "https://github.com/docker/compose/releases/download/${docker_compose_version}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+}
+
+install_docker
+install_docker_compose
