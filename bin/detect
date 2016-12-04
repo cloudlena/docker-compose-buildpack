@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+set -e
+
+build_dir=$1
+
+BP=$(dirname "$(dirname "$0")")
+
+if [ -f "${build_dir}/Dockerfile" ] ||
+   [ -f "${build_dir}/docker-compose.yml" ]
+then
+  echo "Docker $(cat "${BP}/VERSION")"
+  exit 0
+fi
+
+exit 1

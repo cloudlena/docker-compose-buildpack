@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# bin/release <build-dir>
+
+set -e
+
+build_dir=$1
+
+cat << EOF
+addons: []
+default_process_types:
+  web: docker-compose up -d
+EOF
