@@ -11,11 +11,11 @@ build_dir=$1
 function install_docker {
   echo "Installing Docker ${docker_version}"
 
-  curl -L "https://get.docker.com/builds/Linux/x86_64/docker-${docker_version}.tgz" -o "/tmp/app/docker.tgz"
+  curl -L "https://get.docker.com/builds/Linux/x86_64/docker-${docker_version}.tgz" -o "${build_dir}/docker.tgz"
 
   ls -a ${build_dir}
 
-  tar -xvzf docker.tgz --directory /tmp/app/docker
+  tar -xvzf "${build_dir}/docker.tgz" --directory "${build_dir}/docker"
 
   ls -a /tmp/app/docker
 }
