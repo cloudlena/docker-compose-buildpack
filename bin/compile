@@ -11,9 +11,9 @@ build_dir=$1
 function install_docker {
   echo "Installing Docker Engine ${docker_version}"
 
-  sudo apt-get update
-  sudo apt-get install -y "docker-engine=${docker_version}"
-  sudo service docker start
+  su apt-get update
+  su apt-get install -y "docker-engine=${docker_version}"
+  su service docker start
 }
 
 function install_docker_compose {
