@@ -8,5 +8,5 @@ build_dir=$1
 cat << EOF
 addons: []
 default_process_types:
-  web: docker-compose up -d
+  web: "$1/docker-compose" up -d
 EOF
