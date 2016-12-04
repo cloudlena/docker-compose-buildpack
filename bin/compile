@@ -11,11 +11,11 @@ docker_compose_version="1.9.0"
 # env_dir=${3:-}
 
 function install_docker {
-  echo "Installing Docker ${docker_version}"
+  echo "Installing Docker Engine ${docker_version}"
 
-  apt-get update
-  apt-get install -y docker-engine
-  service docker start
+  sudo apt-get update
+  sudo apt-get install -y "docker-engine=${docker_version}"
+  sudo service docker start
 }
 
 function install_docker_compose {

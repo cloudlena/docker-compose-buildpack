@@ -1,5 +1,5 @@
-# Cloud Foundry Docker Buildpack
+# Cloud Foundry Docker Compose Buildpack
 
-> This is a container experiemnt and not to be used in production
+> This is an **experiemnt** and therefore not to be used in production.
 
-This buildpack installs [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) and allows to run Docker containers within the Cloud Foundry [Warden Container](https://docs.cloudfoundry.org/concepts/architecture/warden.html). This allows you to `cf push` ordinary `Dockerfile`s or `docker-compose.yml` files.
+This buildpack installs the [Docker Engine](https://www.docker.com/products/docker-engine) and [Docker Compose](https://docs.docker.com/compose/) and allows to run Docker applications within the Cloud Foundry [Warden Container](https://docs.cloudfoundry.org/concepts/architecture/warden.html). This allows you to `cf push` ordinary `docker-compose.yml` files and have them run within Cloud Foundry.
