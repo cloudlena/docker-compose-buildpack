@@ -11,8 +11,6 @@ build_dir=$1
 function install_docker {
   echo "Installing Docker ${docker_version}"
 
-  docker ps
-
   ls -a /var/run
 
   cd "${build_dir}"
