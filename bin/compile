@@ -14,10 +14,7 @@ function install_docker {
   cd "${build_dir}"
 
   curl -O "https://get.docker.com/builds/Linux/x86_64/docker-${docker_version}.tgz"
-
-  tar -xvzf "${build_dir}/docker-${docker_version}.tgz"
-
-  ls -la
+  tar -xzf "docker-${docker_version}.tgz"
 
   "docker/dockerd" &
 }
