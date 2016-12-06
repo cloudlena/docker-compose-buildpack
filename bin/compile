@@ -11,8 +11,6 @@ build_dir=$1
 function install_docker {
   echo "Installing Docker ${docker_version}"
 
-  ls -a /var/run
-
   cd "${build_dir}"
 
   curl -O "https://get.docker.com/builds/Linux/x86_64/docker-${docker_version}.tgz"
