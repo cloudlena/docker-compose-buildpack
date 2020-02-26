@@ -3,8 +3,11 @@
 
 set -e
 
-docker_version=${DOCKER_VERSION:="1.12.3"}
-docker_compose_version=${DOCKER_COMPOSE_VERSION:="1.9.0"}
+#docker_version=${DOCKER_VERSION:="1.12.3"}
+#docker_compose_version=${DOCKER_COMPOSE_VERSION:="1.9.0"}
+
+docker_version=${DOCKER_VERSION:="19.03.5"}
+docker_compose_version=${DOCKER_COMPOSE_VERSION:="1.25.4"}
 
 build_dir=$1
 
